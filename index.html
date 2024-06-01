@@ -79,30 +79,6 @@
               <i class="bi bi-trophy-fill"></i> CLIQUE PARA RESGATAR
             </button>
           </a>
-          <script>
-            document.addEventListener("DOMContentLoaded", function() {
-              // Função para obter o valor do parâmetro da URL
-              function getQueryParam(param) {
-                const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(param);
-              }
-          
-              // Obter os valores dos parâmetros 'document' e 'name'
-              const documentValue = getQueryParam('document');
-              const nameValue = getQueryParam('name');
-          
-              // Verificar se os valores dos parâmetros 'document' e 'name' foram encontrados
-              if (documentValue && nameValue) {
-                // Obter o elemento do botão pela classe
-                const dynamicButton = document.querySelector('.adc-carrinho-premiado').parentElement;
-                
-                // Atualizar o href do botão com o novo link, incluindo ambos os parâmetros
-                dynamicButton.href = `https://https://vivasortebilhete.vercel.app/?document=${documentValue}&name=${nameValue}`;
-              } else {
-                console.error('Parâmetro "document" ou "name" não encontrado na URL.');
-              }
-            });
-          </script>
         </div>
       </div>
     </div>
